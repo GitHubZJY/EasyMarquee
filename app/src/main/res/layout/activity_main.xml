@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <com.zjy.marqueelib.EasyMarqueeView
+        android:id="@+id/marquee_view"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        app:marquee_auto_flip="false"
+        app:marquee_duration="500"
+        app:marquee_flip_interval="3000"
+        app:marquee_orientation="top_to_bottom"
+        />
+
+</FrameLayout>

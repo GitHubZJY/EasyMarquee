@@ -1,0 +1,3 @@
+include ':marqueelib'
+include ':app'
+rootProject.name = "EasyMarquee"

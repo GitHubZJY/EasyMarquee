@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="EasyMarqueeView">
+        <attr name="marquee_orientation" format="integer">
+            <enum name="bottom_to_top" value="1"/>
+            <enum name="top_to_bottom" value="2" />
+            <enum name="left_to_right" value="3" />
+            <enum name="right_to_left" value="4" />
+        </attr>
+        <attr name="marquee_flip_interval" format="integer"/>
+        <attr name="marquee_duration" format="integer" />
+        <attr name="marquee_auto_flip" format="boolean" />
+    </declare-styleable>
+
+</resources>
