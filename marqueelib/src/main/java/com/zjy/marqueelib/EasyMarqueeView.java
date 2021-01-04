@@ -101,24 +101,27 @@ public class EasyMarqueeView extends ViewFlipper {
 
         setFlipInterval(mFlipInterval + mDuration);
 
-        getOutAnimation().setAnimationListener(new Animation.AnimationListener() {
-            @Override
-            public void onAnimationStart(Animation animation) {
+        Animation outAnimation = getOutAnimation();
+        if (outAnimation != null) {
+            outAnimation.setAnimationListener(new Animation.AnimationListener() {
+                @Override
+                public void onAnimationStart(Animation animation) {
 
-            }
-
-            @Override
-            public void onAnimationEnd(Animation animation) {
-                if (mListener != null) {
-                    mListener.onMarquee(getCurrentItem());
                 }
-            }
 
-            @Override
-            public void onAnimationRepeat(Animation animation) {
+                @Override
+                public void onAnimationEnd(Animation animation) {
+                    if (mListener != null) {
+                        mListener.onMarquee(getCurrentItem());
+                    }
+                }
 
-            }
-        });
+                @Override
+                public void onAnimationRepeat(Animation animation) {
+
+                }
+            });
+        }
     }
 
     public void setMarqueeAdapter(MarqueeAdapter<?> adapter) {

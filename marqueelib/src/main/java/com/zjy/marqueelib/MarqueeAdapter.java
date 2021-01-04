@@ -53,6 +53,10 @@ public abstract class MarqueeAdapter<T> {
 
     public void setData(List<T> data) {
         checkInitList();
+        if (data.size() == 1) {
+            //兼容只有一个数据的场景过渡动画
+            data.add(data.get(0));
+        }
         mDataList.clear();
         mDataList.addAll(data);
         for (int index = 0; index < mDataList.size(); index++) {
