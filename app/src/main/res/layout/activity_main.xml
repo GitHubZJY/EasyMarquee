@@ -1,19 +1,62 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
     <com.zjy.marqueelib.EasyMarqueeView
-        android:id="@+id/marquee_view"
+        android:id="@+id/marquee_view_1"
         android:layout_width="match_parent"
         android:layout_height="100dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
         app:marquee_auto_flip="false"
         app:marquee_duration="500"
-        app:marquee_flip_interval="3000"
+        app:marquee_flip_interval="500"
         app:marquee_orientation="top_to_bottom"
         />
 
-</FrameLayout>
+    <com.zjy.marqueelib.EasyMarqueeView
+        android:id="@+id/marquee_view_2"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        app:marquee_auto_flip="false"
+        app:marquee_duration="1000"
+        app:marquee_flip_interval="500"
+        app:marquee_orientation="bottom_to_top"
+        />
+
+    <com.zjy.marqueelib.EasyMarqueeView
+        android:id="@+id/marquee_view_3"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        app:marquee_auto_flip="false"
+        app:marquee_duration="600"
+        app:marquee_flip_interval="500"
+        app:marquee_orientation="left_to_right"
+        />
+
+    <com.zjy.marqueelib.EasyMarqueeView
+        android:id="@+id/marquee_view_4"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        app:marquee_auto_flip="false"
+        app:marquee_duration="800"
+        app:marquee_flip_interval="500"
+        app:marquee_orientation="right_to_left"
+        />
+
+</LinearLayout>

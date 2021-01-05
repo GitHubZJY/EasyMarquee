@@ -126,11 +126,11 @@ protected void onDestroy() {
 ```
 &nbsp;
 ### 6.其他属性.
-本库也提供了其它的一些配置，例如： `getCurrentItem` 、 `setFlipInterval` 等，同时也继承了ViewFlipper的方法，后续会再根据需要进行扩充.
+本库也提供了其它的一些配置，例如： `getCurrentItem` 、 `setFlipInterval` 等，同时也继承了 `ViewFlipper` 的方法，后续会再根据需要进行扩充.
 本库的自定义样式和数据类型参考适配器的模式设计，跑马灯效果已经基本满足需求，后续会再针对视图的复用和其它拓展属性继续更新，提升组件的性能，欢迎issue和star~
 
 &nbsp;
 ## About Me
-一个在奋斗路上的Android小生
-GitHub: [GitHubZJY](https://github.com/GitHubZJY)
+一个在奋斗路上的Android小生 <br/>
+GitHub: [GitHubZJY](https://github.com/GitHubZJY) <br/>
 欢迎关注简书: [Android小Y](https://www.jianshu.com/u/4cb2688ddf31)

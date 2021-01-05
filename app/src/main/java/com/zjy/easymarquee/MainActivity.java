@@ -19,39 +19,46 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
-    private EasyMarqueeView easyMarqueeView;
-    private MarqueeAdapter<String> adapter = new MarqueeAdapter<String>() {
-        @Override
-        public View onCreateView(int position, String data) {
-            return LayoutInflater.from(MainActivity.this).inflate(R.layout.item_layout, null);
-        }
-
-        @Override
-        public void onBindView(final int position, View view, final String data) {
-            TextView titleView = view.findViewById(R.id.item_title);
-            if (position % 2 == 0) {
-                view.setBackgroundColor(Color.LTGRAY);
-            } else {
-                view.setBackgroundColor(Color.RED);
-            }
-            titleView.setText(data);
-            view.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    Toast.makeText(MainActivity.this, data, Toast.LENGTH_SHORT).show();
-                }
-            });
-        }
-    };
+    private EasyMarqueeView easyMarqueeView1, easyMarqueeView2, easyMarqueeView3, easyMarqueeView4;
+    private MarqueeAdapter<String> adapter1 = new CustomMarqueeAdapter(this);
+    private MarqueeAdapter<String> adapter2 = new CustomMarqueeAdapter(this);
+    private MarqueeAdapter<String> adapter3 = new CustomMarqueeAdapter(this);
+    private MarqueeAdapter<String> adapter4 = new CustomMarqueeAdapter(this);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        easyMarqueeView = findViewById(R.id.marquee_view);
-        easyMarqueeView.setMarqueeAdapter(adapter);
-        easyMarqueeView.setMarqueeListener(new MarqueeListener() {
+        easyMarqueeView1 = findViewById(R.id.marquee_view_1);
+        easyMarqueeView2 = findViewById(R.id.marquee_view_2);
+        easyMarqueeView3 = findViewById(R.id.marquee_view_3);
+        easyMarqueeView4 = findViewById(R.id.marquee_view_4);
+        initData(easyMarqueeView1, 1);
+        initData(easyMarqueeView2, 2);
+        initData(easyMarqueeView3, 3);
+        initData(easyMarqueeView4, 4);
+    }
+
+    private void initData(EasyMarqueeView view, int position) {
+        MarqueeAdapter adapter = null;
+
+        switch (position) {
+            case 1:
+                adapter = adapter1;
+                break;
+            case 2:
+                adapter = adapter2;
+                break;
+            case 3:
+                adapter = adapter3;
+                break;
+            case 4:
+                adapter = adapter4;
+                break;
+        }
+        view.setMarqueeAdapter(adapter);
+        view.setMarqueeListener(new MarqueeListener() {
             @Override
             public void onMarquee(int position) {
                 Log.d("onMarquee", "position: " + position);
@@ -65,21 +72,24 @@ public class MainActivity extends AppCompatActivity {
         dataList.add("title4");
         adapter.setData(dataList);
 
-        easyMarqueeView.postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                dataList.add("title5");
-                dataList.add("title6");
-                adapter.setData(dataList);
-            }
-        }, 10000);
+//        view.postDelayed(new Runnable() {
+//            @Override
+//            public void run() {
+//                dataList.add("title5");
+//                dataList.add("title6");
+//                adapter.setData(dataList);
+//            }
+//        }, 10000);
 
-        easyMarqueeView.startFlip();
+        view.startFlip();
     }
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        easyMarqueeView.stopFlip();
+        easyMarqueeView1.stopFlip();
+        easyMarqueeView2.stopFlip();
+        easyMarqueeView3.stopFlip();
+        easyMarqueeView4.stopFlip();
     }
 }
