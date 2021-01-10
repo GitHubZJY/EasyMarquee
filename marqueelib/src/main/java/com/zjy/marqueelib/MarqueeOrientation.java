@@ -23,5 +23,9 @@ public class MarqueeOrientation {
      * flip from right to left
      */
     public static final int RIGHT_TO_LEFT = 4;
+    /**
+     * flip by alpha
+     */
+    public static final int ALPHA = 5;
 
 }

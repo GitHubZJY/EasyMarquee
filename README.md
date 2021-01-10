@@ -1,5 +1,5 @@
 # EasyMarquee [![](https://jitpack.io/v/GitHubZJY/EasyMarquee.svg)](https://jitpack.io/#GitHubZJY/EasyMarquee)
-一个基于ViewFlipper实现的跑马灯组件，支持设置滚动时长，默认可选垂直或水平滚动，支持设置自定义滚动动画和自定义样式<br/>
+一个基于ViewFlipper实现的滚动轮播组件，支持设置滚动时长，默认可选垂直或水平滚动，支持设置自定义滚动动画和自定义样式<br/>
 A running lantern component based on view flipper with scrolling vertically or horizontally. Supports setting the rolling time, also supports setting custom rolling animation and custom style.
 
 ## 特性
@@ -127,7 +127,7 @@ protected void onDestroy() {
 &nbsp;
 ### 6.其他属性.
 本库也提供了其它的一些配置，例如： `getCurrentItem` 、 `setFlipInterval` 等，同时也继承了 `ViewFlipper` 的方法，后续会再根据需要进行扩充.
-本库的自定义样式和数据类型参考适配器的模式设计，跑马灯效果已经基本满足需求，后续会再针对视图的复用和其它拓展属性继续更新，提升组件的性能，欢迎issue和star~
+本库的自定义样式和数据类型参考适配器的模式设计，滚动轮播效果已经基本满足需求，后续会再针对视图的复用和其它拓展属性继续更新，提升组件的性能，欢迎issue和star~
 
 &nbsp;
 ## About Me

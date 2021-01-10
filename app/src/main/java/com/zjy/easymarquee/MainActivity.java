@@ -19,11 +19,12 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
-    private EasyMarqueeView easyMarqueeView1, easyMarqueeView2, easyMarqueeView3, easyMarqueeView4;
+    private EasyMarqueeView easyMarqueeView1, easyMarqueeView2, easyMarqueeView3, easyMarqueeView4, easyMarqueeView5;
     private MarqueeAdapter<String> adapter1 = new CustomMarqueeAdapter(this);
     private MarqueeAdapter<String> adapter2 = new CustomMarqueeAdapter(this);
     private MarqueeAdapter<String> adapter3 = new CustomMarqueeAdapter(this);
     private MarqueeAdapter<String> adapter4 = new CustomMarqueeAdapter(this);
+    private MarqueeAdapter<String> adapter5 = new CustomMarqueeAdapter(this);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,10 +35,12 @@ public class MainActivity extends AppCompatActivity {
         easyMarqueeView2 = findViewById(R.id.marquee_view_2);
         easyMarqueeView3 = findViewById(R.id.marquee_view_3);
         easyMarqueeView4 = findViewById(R.id.marquee_view_4);
+        easyMarqueeView5 = findViewById(R.id.marquee_view_5);
         initData(easyMarqueeView1, 1);
         initData(easyMarqueeView2, 2);
         initData(easyMarqueeView3, 3);
         initData(easyMarqueeView4, 4);
+        initData(easyMarqueeView5, 5);
     }
 
     private void initData(EasyMarqueeView view, int position) {
@@ -55,6 +58,9 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case 4:
                 adapter = adapter4;
+                break;
+            case 5:
+                adapter = adapter5;
                 break;
         }
         view.setMarqueeAdapter(adapter);
@@ -91,5 +97,6 @@ public class MainActivity extends AppCompatActivity {
         easyMarqueeView2.stopFlip();
         easyMarqueeView3.stopFlip();
         easyMarqueeView4.stopFlip();
+        easyMarqueeView5.stopFlip();
     }
 }

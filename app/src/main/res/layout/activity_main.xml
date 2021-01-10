@@ -17,11 +17,24 @@
         app:marquee_auto_flip="false"
         app:marquee_duration="500"
         app:marquee_flip_interval="500"
-        app:marquee_orientation="top_to_bottom"
+        app:marquee_orientation="alpha"
         />
 
     <com.zjy.marqueelib.EasyMarqueeView
         android:id="@+id/marquee_view_2"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        app:marquee_auto_flip="false"
+        app:marquee_duration="500"
+        app:marquee_flip_interval="500"
+        app:marquee_orientation="top_to_bottom"
+        />
+
+    <com.zjy.marqueelib.EasyMarqueeView
+        android:id="@+id/marquee_view_3"
         android:layout_width="match_parent"
         android:layout_height="100dp"
         android:layout_marginTop="16dp"
@@ -34,7 +47,7 @@
         />
 
     <com.zjy.marqueelib.EasyMarqueeView
-        android:id="@+id/marquee_view_3"
+        android:id="@+id/marquee_view_4"
         android:layout_width="match_parent"
         android:layout_height="100dp"
         android:layout_marginTop="16dp"
@@ -47,7 +60,7 @@
         />
 
     <com.zjy.marqueelib.EasyMarqueeView
-        android:id="@+id/marquee_view_4"
+        android:id="@+id/marquee_view_5"
         android:layout_width="match_parent"
         android:layout_height="100dp"
         android:layout_marginTop="16dp"

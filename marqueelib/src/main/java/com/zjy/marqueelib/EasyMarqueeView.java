@@ -95,6 +95,9 @@ public class EasyMarqueeView extends ViewFlipper {
             case MarqueeOrientation.RIGHT_TO_LEFT:
                 loadAnim(R.anim.right_left_enter_animation, R.anim.right_left_exit_animation);
                 break;
+            case MarqueeOrientation.ALPHA:
+                loadAnim(R.anim.alpha_enter_animation, R.anim.alpha_exit_animation);
+                break;
             default:
                 break;
         }
