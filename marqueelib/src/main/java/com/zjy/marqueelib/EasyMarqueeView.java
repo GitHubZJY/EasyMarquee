@@ -187,4 +187,22 @@ public class EasyMarqueeView extends ViewFlipper {
         setOutAnimation(exitAnimation);
     }
 
+    @Override
+    protected void onWindowVisibilityChanged(int visibility) {
+        super.onWindowVisibilityChanged(visibility);
+        if (visibility == View.VISIBLE) {
+            startFlip();
+        } else if (visibility == INVISIBLE || visibility == GONE) {
+            stopFlip();
+        }
+    }
+
+    @Override
+    protected void onDetachedFromWindow() {
+        try {
+            super.onDetachedFromWindow();
+        } catch (IllegalArgumentException e) {
+            stopFlipping();
+        }
+    }
 }

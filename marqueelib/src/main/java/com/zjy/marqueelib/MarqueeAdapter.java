@@ -59,6 +59,7 @@ public abstract class MarqueeAdapter<T> {
         }
         mDataList.clear();
         mDataList.addAll(data);
+        mViewList.clear();
         for (int index = 0; index < mDataList.size(); index++) {
             View itemView;
             if (index < mViewList.size()) {
